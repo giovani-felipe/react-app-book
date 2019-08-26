@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
+
 const TableHead = () =>
   (<thead>
     <tr>
@@ -17,7 +18,7 @@ const TableBody = ({ autores, removerAutor }) => {
         <td>{nome}</td>
         <td>{livro}</td>
         <td>{preco}</td>
-        <td><button onClick={() => removerAutor(index)}>Remover</button></td>
+        <td><button className="btn waves-effect waves-light indigo lighten-2" onClick={() => removerAutor(index)}>Remover</button></td>
       </tr>));
   return (<tbody>{linhas}</tbody>);
 };

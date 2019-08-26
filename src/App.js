@@ -3,6 +3,7 @@ import './App.css';
 import Tabela from './Tabela';
 import Formulario from './Formulario';
 import Header from './Header';
+import PopUp from './PopUp';
 
 export default class App extends Component {
 
@@ -37,6 +38,8 @@ export default class App extends Component {
     this.setState({
       autores: autores.filter((autor, ind) => ind !== index)
     });
+
+    PopUp.exibeMensagem("info","Autor removido com sucesso!");
   }
 
   onSubmit = autor => this.setState({ autores: [...this.state.autores, autor] });
