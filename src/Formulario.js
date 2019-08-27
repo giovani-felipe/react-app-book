@@ -33,7 +33,6 @@ export default class Formulario extends Component {
     };
 
     this.state = this.stateInicial;
-    this.popUp = new PopUp();
   }
 
   onSubmit = () => {
@@ -48,7 +47,7 @@ export default class Formulario extends Component {
       const campos = [nome, livro, preco];
       const camposInvalidos = campos.filter(elem => elem.isInvalid);
 
-      camposInvalidos.forEach(campo => this.popUp.exibeMensagem('error', campo.mensagem));
+      camposInvalidos.forEach(campo => PopUp.exibeMensagem('error', campo.mensagem));
     }
   }
 

@@ -13,12 +13,12 @@ const TableHead = () =>
 
 const TableBody = ({ autores, removerAutor }) => {
   const linhas = autores
-    .map(({ nome, livro, preco }, index) =>
-      (<tr key={index}>
+    .map(({ id, nome, livro, preco }) =>
+      (<tr key={id}>
         <td>{nome}</td>
         <td>{livro}</td>
         <td>{preco}</td>
-        <td><button className="btn waves-effect waves-light indigo lighten-2" onClick={() => removerAutor(index)}>Remover</button></td>
+        <td><button className="btn waves-effect waves-light indigo lighten-2" onClick={() => removerAutor(id)}>Remover</button></td>
       </tr>));
   return (<tbody>{linhas}</tbody>);
 };
